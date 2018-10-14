@@ -1,0 +1,169 @@
+html , body
+{
+    height:100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Slackey'; 
+}
+#viewport
+{
+    background-color:#cdcdcd;
+    background-image:linear-gradient(to right, #93291e, #ed231a, #93291e);
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+#viewport.desktop
+{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right:0px;
+    bottom:0px;
+}
+#container
+{
+    position:absolute;
+    width: 740px;
+    height: 540px;
+    left: 10%;
+    top: 0%;
+    margin-left: 160px;
+    margin-top: 60px;
+}
+#container h1
+{
+    
+    font-size: large;
+    text-align: center;
+    color: white;
+} 
+#container #header
+{
+    text-align: center;
+}
+#container #header h1
+{
+    text-align: center;
+    font: 26px Slackey;
+    text-shadow:#000 0px 0px 1px , #000 0px 0px 1px;
+}
+#container #header h3
+{
+    color: #555;
+    padding-bottom: 10px;
+    text-shadow:rgba(255,255,255,0.6) 0px 1px 0px;
+}
+
+#container #buttons
+{
+    margin-top:3px;
+}
+
+#container #buttons #play 
+{
+    font-family: 'Slackey'; 
+    position:absolute;
+    bottom:10px;
+    left:30px;
+    right:30px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius:10px;
+    background-size:auto 62px;
+}
+
+#container #reels
+{
+    display:block;
+    position:relative;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+    background:#000;
+    border: 10px solid;
+    border-color: #777 #999 #666 #999;
+    border-radius:3px;
+    -moz-box-shadow:#fff 0px 1px 0px;
+}
+#container #reels canvas
+{
+    width: 120px;
+    height: 500px;
+    position: relative;
+    background: white;
+    border: 2px solid gold;
+}
+
+#container #overlay 
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    opacity: 0.3;
+    background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);
+    display: none;
+}
+#container #overlay #winline 
+{	
+    width: 100%;
+    height: 5px;
+    background: red;	
+    position: relative;
+    top: 0%;
+}
+#reels #results
+{
+    display: none;
+    background: white;
+    border: 3px solid gold;
+    height: 320px;
+    width: 550px;
+    left: 20px;
+    top: 15px;
+    position: absolute;
+    font-size: x-large;
+}
+
+#results #score {
+    margin: 5px;
+}
+
+#results #score img {
+    vertical-align: middle;
+}
+
+
+.button
+{
+    position:relative;
+    display:block;
+    margin-top: -200px;
+    text-align: center;
+    color: #fff;
+    box-shadow: inset rgba(255,255,255,0.15) 0px 1px 0px;
+    border: 1px solid rgba(0,0,0,0.15);
+    background-image: linear-gradient(to right, #ed231a, #93291e, #ed231a,);
+    background-position: 0px -1px;
+    text-shadow:#000 0px 0px 1px;
+    text-decoration: none;
+}
+.button.button-default
+{
+    background-image:-moz-linear-gradient(#77e0fb,#3f93ac);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#77e0fb), to(#3f93ac));
+}
+.button.button-default:hover
+{
+    background-image:-moz-linear-gradient(#ffd539,#af861e);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#ffd539), to(#af861e));
+    cursor:pointer;
+}
+.button.button-default:active
+{
+    background-image:-moz-linear-gradient(#ffb133,#b3671a);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#ffb133), to(#b3671a));
+}

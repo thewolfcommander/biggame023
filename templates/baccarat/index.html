@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Baccarat | BIGGAME</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/baccarat.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/favicon.png' %}">
+</head>
+
+<body>
+     <style type="text/css">
+      
+#mis-ind:hover {
+    background: #CFB53B;
+    color: red;
+}
+    </style>
+<nav class="navbar navbar-expand-md navbar-default fixed-top">
+    <div class="d-flex w-50 order-0">
+        <a class="navbar-brand mr-1 wow hinge" href="{% url 'home' %}"><img src="{% static 'images/logo/logo.png' %}" style="width: 40px; border-radius: 50%;"> BIGGAME.IO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon">  </span>
+            <br><br> <p style="color: #D4AF37; text-decoration: underline; ">MENU</p>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar" >
+        <ul class="navbar-nav">
+          {% block navbar %}
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+              <li class="nav-item ">
+                <div class="btn-group dropright">
+                  <a href="class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><img src="{% static 'images/avtar.png' %}" style="border-radius: 50%; width: 40px;"></a>
+                  </button>
+                  <div class="dropdown-menu" style="background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);">
+                    <a href="{% url 'my_profile' user.pk %}" class ="nav-link" id = "mis-ind" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">My Profile</a>
+                    <a href="{% url 'user_set' user.pk %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Settings</a>
+
+                    <a href="{% url 'demo' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Demo</a>
+                    <a href="{% url 'help' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Help</a>
+                    <a class="nav-link"  id = "mis-ind" href="{% url 'logout' %}" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Logout</a>
+                  </div>
+                </div>
+
+          {% else %}
+
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'login' %}">LOGIN </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'signup' %}">REGISTER </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+
+          {% endif %}
+          {% endblock %}
+        </ul>
+    </div>
+    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+</nav>
+
+<div class="container" style="min-height: 500px; margin-top: 100px;">
+
+
+<h1 style="text-align: center; color: #003300;">BACCARAT PLAY</h1>
+<br>
+
+
+  <div>
+    <div id="decoration">
+      <h1 class="casinoName">
+        <span style="color:black">&spades;</span>
+        <span style="color:red">&hearts;</span>
+        <span style="color:black"> &clubs;</span>
+        <span style="color:red"> &diams;</span>
+        <span style="color:yellow"> Casino Royale </span>
+        <span style="color:black">&spades;</span>
+        <span style="color:red">&hearts;</span>
+        <span style="color:black"> &clubs;</span>
+        <span style="color:red"> &diams;</span>
+      </h1>
+    </div>
+
+    <div class="horizontal-line">
+    </div>
+
+    <div class="flex-container" id="cardRow">
+      <div class="vertical-card" id="bankerThird" style="width: 70px; height: 90px;">
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+      <div class="vertical-card" id="bankerSecond" style="width: 70px; height: 90px;">
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+      <div class="vertical-card" id="bankerFirst" style="width: 70px; height: 90px;">
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+      <div class="verical-line">
+      </div>
+      <div class="vertical-card" id="playerSecond" style="width: 70px; height: 90px;">
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+      <div class="vertical-card" id="playerFirst" style="width: 70px; height: 90px;">
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+      <div class="vertical-card" id="playerThird" style="width: 70px; height: 90px;"> 
+        <span class="suit"></span>
+        <span class="image"></span>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div>
+        <h1>
+          <span style="color:#D4AF37;">Banker</span>
+        </h1>
+      </div>
+      <div>
+        <h1>
+          <span style="color:#D4AF37;">Player</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="horizontal-line">
+    </div>
+    <br/>
+
+    <div id="bonusBox" class="flex-container">
+      <form>
+        <span style="color:#D4AF37; font-size: 20px; font-weight: bold;">Dragon</span>
+        <input type="number" id="dragonBet" min="0" max="700" step="5" value="0" style="height: 40px; width: 90px;border-radius: 9px; text-align: center; border-color: green;">
+        <span style="color:#D4AF37; font-size: 20px; font-weight: bold;">Tie</span>
+        <input type="number" id="tieBet" min="0" max="700" step="5" value="0" style="height: 40px; width: 90px;border-radius: 9px; text-align: center; border-color: green;">
+        <span style="color:#D4AF37; font-size: 20px; font-weight: bold;">Panda</span>
+        <input type="number" id="pandaBet" min="0" max="700" step="5" value="0" style="height: 40px; width: 90px;border-radius: 9px; text-align: center; border-color: green;">
+      </form>
+    </div>
+
+    <div class="horizontal-line">
+    </div>
+    <br/>
+
+    <div id="betBox" class="flex-container">
+      <div>
+        <h1>
+          <span style="color:#D4AF37; font-size: 50px; font-weight: bold;">Banker</span>
+          <input type="number" id="bankerBet" min="0" max="14000" step="25" value="0" style="height: 40px; width: 90px;border-radius: 9px; text-align: center; border-color: green;">
+        </h1>
+      </div>
+      <div class="verical-line2">
+      </div>
+      <div>
+        <h1>
+          <span style="color:#D4AF37; font-size: 50px; font-weight: bold;">Player</span>
+          <input type="number" id="playerBet" min="0" max="14000" step="25" value="0" style="height: 40px; width: 90px;border-radius: 9px; text-align: center; border-color: green;">
+        </h1>
+      </div>
+    </div>
+
+    <div class="horizontal-line">
+    </div>
+    <br/>
+
+    <div style="text-align:center">
+      <span style="color:#D4AF37;  font-size: 30px; font-weight: bold;">My Total: </span>
+      <span style="color:#D4AF37;   font-size: 30px; font-weight: bold;" id="myChipTotal"></span>
+    </div>
+
+    <div class="horizontal-line">
+    </div>
+    <br/>
+
+    <div id="theControls" style="text-align: center;">
+      <button type="button" class="btn btn-outline-info" id="aboutTheGame" style="width: 250px;"> Play Rules (open the console)</button>
+      <button type="button" class="btn btn-outline-info" id="shuffleButton">
+        Amount For Play <span>**</span>
+      </button>
+      <button type="button" class="btn btn-info" id="dealButton" disabled style="width: 250px;">
+        Play & Win
+      </button>
+    </div>
+
+  </div>  <footer class="page-footer font-small cyan darken-3">
+    
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="{% url 'home' %}"> BIGGAME.IO </a>
+      </div>
+      </footer>
+</div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="{% static 'js/baccarat.js' %}">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/favicon.png' %}">
+  <title> Welcome to Our casino</title>
+
+  </head>
+  <body>
+    
+    <style type="text/css">
+      
+#mis-ind:hover {
+    background: #CFB53B;
+    color: red;
+}
+    </style>
+  
+
+<!-- 
+10 - Navbar justified centered links full width
+-->
+<nav class="navbar navbar-expand-md navbar-default fixed-top">
+    <div class="d-flex w-50 order-0">
+        <a class="navbar-brand mr-1 wow hinge" href="{% url 'home' %}"><img src="{% static 'images/logo/logo.png' %}" style="width: 40px; border-radius: 50%;"> BIGGAME.IO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon">  </span>
+            <br><br> <p style="color: #D4AF37; text-decoration: underline; ">MENU</p>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar" >
+        <ul class="navbar-nav">
+          {% block navbar %}
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+              <li class="nav-item ">
+                <div class="btn-group dropright">
+                  <a href="class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><img src="{% static 'images/avtar.png' %}" style="border-radius: 50%; width: 40px;"></a>
+                  </button>
+                  <div class="dropdown-menu" style="background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);">
+                    <a href="{% url 'my_profile' user.pk %}" class ="nav-link" id = "mis-ind" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">My Profile</a>
+                    <a href="{% url 'user_set' user.pk %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Settings</a>
+
+                    <a href="{% url 'demo' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Demo</a>
+                    <a href="{% url 'help' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Help</a>
+                    <a class="nav-link"  id = "mis-ind" href="{% url 'logout' %}" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Logout</a>
+                  </div>
+                </div>
+
+          {% else %}
+
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'login' %}">LOGIN </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'signup' %}">REGISTER </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+
+          {% endif %}
+          {% endblock %}
+        </ul>
+    </div>
+    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+</nav>
+<hr>
+<hr>
+
+<center><h1 style="margin-top: 100px;">DEMO</h1></center>
+  <div class="row" style="min-height: 500px; border-radius: 12px; opacity: 0.8; margin-top: 100px; background-image: url(https://images.pexels.com/photos/106152/euro-coins-currency-money-106152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); padding: 50px;">
+    <div class="col-md-5" style="padding: 0px; margin: 10px; background-image: linear-gradient(to right, #93291e, #ed231a, #93291e); border-radius: 12px;">
+      <center><iframe width="530" height="345" src="https://www.youtube.com/embed/pWOMJ4ANVKI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+    </div>
+    <div class="col-md-6" style="padding: 0px; margin: 10px;  background-image: linear-gradient(to right, #93291e, #ed231a, #93291e); border-radius: 12px;">
+      <center><iframe width="570" height="345" src="https://www.youtube.com/embed/8CljzvH-64w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+    </div>
+  </div>
+
+    <hr>
+        <footer class="page-footer font-small cyan darken-3">
+    
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="{% url 'home' %}"> BIGGAME.IO </a>
+      </div>
+      </footer>
+ 
+
+            <div class="col-md-2 col-sm-4 col-xs-12" ></div>
+      </div>
+  </div>
+
+
+
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/wow.min.js' %}"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+  </body>
+</html>

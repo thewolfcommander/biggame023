@@ -1,0 +1,183 @@
+body{
+	background-color: linear-gradient(to right, #93291e, #ed231a, #93291e);
+	color: #CFB53B;
+}
+
+.navbar-default {
+    background-image: linear-gradient(to right,  #ed231a, #93291e,#ed231a);
+    border-color: #D4AF37;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color:  #D4AF37;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color:  #D4AF37;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #5E5E5E;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+}
+
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color:   #D4AF37;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+
+
+
+/* Contactus page */
+
+
+
+
+h1,h2,h3 {
+    
+
+    text-transform: uppercase;
+    letter-spacing:1px;
+}
+
+p{
+    margin:0 0 25px;
+    font-size:18px;
+    line-height:1.6em;
+}
+a{
+    color:#26a5d3;
+}
+a:hover,a:focus{
+    text-decoration:none;
+    color:#26a5d3;
+}
+
+#contact{
+    
+    color:#D4AF37;
+    padding-bottom:80px;
+}
+
+textarea.form-control{
+    height:100px;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+
+
+
+/** support page code */
+
+
+
+.y-us-head {
+    text-align: center;
+    margin: 0 0 91px;
+}
+
+.y-us-title-border {
+    background: #ffae11 none repeat scroll 0 0;
+    border-radius: 2px;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    width: 50px;
+}
+.service-3 .service-box {
+    margin-bottom: 18px;
+}
+.service-3 .service-box .iconset {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+.service-3 .service-box .iconset i {
+    color: #000;
+    font-size: 44px;
+}
+.service-3 .service-box .y-us-content {
+    float: left;
+    width: 75%;
+}
+service-3 .service-box .y-us-content h4 {
+    color: #3a3a3a;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 14px 0 12px;
+    text-transform: uppercase;
+}
+.service-3 .service-box .y-us-content p {
+    color: #777777;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.icon {
+    color : #f4b841;
+    padding:0px;
+    font-size:40px;
+    border: 1px solid #fdb801;
+    border-radius: 100px;
+    color: #fdb801;
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 70px;
+}
+
+    </style>
+
+

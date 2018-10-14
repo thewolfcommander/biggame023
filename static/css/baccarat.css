@@ -1,0 +1,143 @@
+body{
+  background-image: linear-gradient(to right, #93291e, #ed231a,#ed231a, #93291e);
+
+}
+
+.the-controls {
+  
+  text-align: center;
+
+
+}
+
+.horizontal-line {
+  border: 1px solid #D4AF37;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.verical-line {
+  border-left: 1px solid #D4AF37;
+  height: 100px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.verical-line2 {
+  border-left: 1px solid #D4AF37;
+  height: 50px;
+  margin: 1px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.horizontal-card {
+  display: inline-block;
+  text-align: left;
+  margin: 25px;
+  padding: 18px 15px 0 15px;
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+  background-color:  #D4AF37;
+  border: solid 1px black;
+}
+
+.vertical-card {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: 18px 15px 0 15px;
+  width: 40px;
+  height: 70px;
+  font-size: 20px;
+  background-color: green;
+  border: solid 2px #D4AF37;
+}
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.casinoName {
+  text-align: center;
+}
+
+.Spades {
+  color: black;
+}
+
+.Clubs {
+  color: black;
+}
+
+.Hearts {
+  color: red;
+}
+
+.Diamonds {
+  color: red;
+}
+
+#bonusBox {
+  background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);
+}
+
+#betBox {
+  background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);
+  margin: 0px;
+  height: 50px;
+  text-align: center;
+}
+
+#dragon {
+  width: 45px;
+}
+
+#tie {
+  width: 40px;
+}
+
+#panda {
+  width: 45px;
+
+}
+
+#bankerBet {
+  width: 40px;
+}
+
+#playerBet {
+  width: 40px;
+}
+
+#myTotal {
+  background-color: #D4AF37;
+  width: 60px;
+  color: 
+  border: none;
+}
+
+.suit {
+  border: none;
+}
+
+.image {
+  border: none;
+}
+
+/* .hidden {
+  visibility: hidden;
+} */

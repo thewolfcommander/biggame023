@@ -1,0 +1,168 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/favicon.png' %}">
+  <title> Welcome to Our casino</title>
+
+  </head>
+  <body>
+    
+    <style type="text/css">
+      
+#mis-ind:hover {
+    background: #CFB53B;
+    color: red;
+}
+    </style>
+  
+
+<!-- 
+10 - Navbar justified centered links full width
+-->
+<nav class="navbar navbar-expand-md navbar-default fixed-top">
+    <div class="d-flex w-50 order-0">
+        <a class="navbar-brand mr-1 wow hinge" href="{% url 'home' %}"><img src="{% static 'images/logo/logo.png' %}" style="width: 40px; border-radius: 50%;"> BIGGAME.IO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon">  </span>
+            <br><br> <p style="color: #D4AF37; text-decoration: underline; ">MENU</p>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar" >
+        <ul class="navbar-nav">
+          {% block navbar %}
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+              <li class="nav-item ">
+                <div class="btn-group dropright">
+                  <a href="class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><img src="{% static 'images/avtar.png' %}" style="border-radius: 50%; width: 40px;"></a>
+                  </button>
+                  <div class="dropdown-menu" style="background-image: linear-gradient(to right, #93291e, #ed231a, #93291e);">
+                    <a href="{% url 'my_profile' user.pk %}" class ="nav-link" id = "mis-ind" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">My Profile</a>
+                    <a href="{% url 'user_set' user.pk %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Settings</a>
+
+                    <a href="{% url 'demo' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Demo</a>
+                    <a href="{% url 'help' %}"  id = "mis-ind" class="nav-link" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Help</a>
+                    <a class="nav-link"  id = "mis-ind" href="{% url 'logout' %}" style="color: color: #CFB53B; border-bottom: 1px solid #CFB53B;">Logout</a>
+                  </div>
+                </div>
+
+          {% else %}
+
+            <li class="nav-item">
+             <a class="nav-link " href="{% url 'home' %}">HOME </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'our_games' %}">OUR_GAMES </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'promotion' %}">PROMOTION </a>
+            </li>  
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'login' %}">LOGIN </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'signup' %}">REGISTER </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'support' %}">SUPPORT </a>
+            </li>   
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS </a>
+            </li>
+
+          {% endif %}
+          {% endblock %}
+        </ul>
+    </div>
+    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+</nav>
+<hr>
+<hr>
+<div class="container" style="min-height: 500px; margin-top: 60px;">
+  <div class="row">
+    <div class="col-md-3" style="min-height: 450px; padding: 10px; border-right: 0.1px solid #CFB53B;">
+      <center><a class="nav-link"  id = "mis-ind" href="{% url 'show404' %}" style=" margin-top: 20px; width: 80%; border-radius: 10px; color: #d4d9d1; border: 1px solid #CFB53B;">Request Payment (ETH)</a></center><hr><hr>
+          <center><a class="nav-link"  id = "mis-ind" href="https://www.blockchain.com/btc/address/1Es23JqeNChp4DAoGaxK4AEpfCycySBHED" style=" margin-top: 20px; width: 80%; border-radius: 10px; color: #d4d9d1; border: 1px solid #CFB53B;">Request Payment (BTC)</a></center><hr><hr>
+          <center><a class="nav-link"  id = "mis-ind" href="{% url 'add_profile' user.pk %}" style=" margin-top: 20px; width: 80%; border-radius: 10px; color: #d4d9d1; border: 1px solid #CFB53B;">Add Profile</a></center><hr><hr>
+
+          <center><a class=""  id = "" href="" style=" margin-top: 20px; width: 80%; color: #CFB53B;">Logout</a></center><hr><hr>
+          <center><a class="{% url 'support' %}"  id = "" href="" style=" margin-top: 20px; width: 80%; color: #CFB53B;">Settings</a></center><hr><hr>
+          <center><a class=""  id = "" href="{% url 'payment:home' %}" style=" margin-top: 20px; width: 80%; color: #CFB53B;">Add Payment</a></center><hr><hr>
+    </div>
+    <div class="col-md-9" style="min-height: 450px; padding: 10px;">
+      <center><h1 style="color: #CFB53B; border-bottom: 1px solid #CFB53B;">MY PROFILE</h1></center>
+      <div class="row">
+        {% block Profile %}
+        <div class="col-md-8" style="min-height: 200px; padding: 30px;">
+          <p style="color: #d4d9d1;"><strong>Username  : </strong><span style="color: #CFB53B;">{{ profile_username }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Full Name : </strong><span style="color: #CFB53B;">{{ profile_name }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Email     : </strong><span style="color: #CFB53B;">{{ profile_email }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Mobile    : </strong><span style="color: #CFB53B;">{{ profile_phone }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Balance   : </strong><span style="color: #CFB53B;">{{ profile_balance }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Credit    : </strong><span style="color: #CFB53B;">{{ profile_credit_amount }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Your Referral Code    : </strong><span style="color: #CFB53B;">{{ profile_ref }}</span></p><hr>
+          <p style="color: #d4d9d1;"><strong>Your Points    : </strong><span style="color: #CFB53B;">100</span></p><hr>
+          <hr>
+          <span style="color: teal;"><strong>Note:</strong><em>Your points get activated in 24 hrs completely. Please Add more amount to increase your points.</em></span>
+        </div>
+        <div class="col-md-4" style="min-height: 150px; padding: 30px;">
+          <center><img src="{{ profile_image.url }}" style="width: 80%; border-radius: 10px; border: 1px solid #CFB53B;"></center>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+
+    <hr>
+        <footer class="page-footer font-small cyan darken-3">
+    
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="{% url 'home' %}"> BIGGAME.IO </a>
+      </div>
+      </footer>
+ 
+
+            <div class="col-md-2 col-sm-4 col-xs-12" ></div>
+      </div>
+  </div>
+
+
+
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/wow.min.js' %}"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+  </body>
+</html>

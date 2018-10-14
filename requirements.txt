@@ -6,4 +6,8 @@ psycopg2==2.7.5
 pytz==2018.5
 whitenoise==4.0
 dj-static==0.0.6
+<<<<<<< HEAD
 django-toolbelt==0.0.1
+=======
+django-toolbelt==0.0.1
+>>>>>>> f6f0484afd21cd8f27df7a4f7413826775312deb
